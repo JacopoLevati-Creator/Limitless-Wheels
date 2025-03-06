@@ -77,9 +77,16 @@ public class EyeTrackingRay : MonoBehaviour
 
             eyeInteractable.IsHovered = true;
 
-            Vector3 directionToTarget = (hit.point - transform.position).normalized;
-            transform.position += directionToTarget * 1.0f;
+            
 
+            Vector3 directionToTarget = (hit.point - transform.position).normalized;
+            //transform.position += directionToTarget * 1.0f;
+            //transform.position += directionToTarget * moveSpeed * Time.deltaTime; 
+            //transform.position= eyeInteractable.Pos;
+              
+            // Movimento più fluido verso il punto colpito dal raggio
+            
+            
         }
         else
         {
@@ -101,8 +108,5 @@ public class EyeTrackingRay : MonoBehaviour
         {
             eyeInteractables.Clear();
         }
-    }
-
-   
-
+    } 
 }
