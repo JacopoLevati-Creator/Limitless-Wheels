@@ -249,6 +249,9 @@ MonoBehaviour:
   OnObjectHover:
     m_PersistentCalls:
       m_Calls: []
+  OnObjectUnhover:
+    m_PersistentCalls:
+      m_Calls: []
   OnHoverActiveMaterial: {fileID: 2100000, guid: 883c439e5d0a9884f860bfb8a5a7d769, type: 2}
   OnHoverInactiveMaterial: {fileID: 2100000, guid: 5099774cca9871c44b1a74846d7b5d11, type: 2}
 --- !u!54 &142609496
@@ -1350,6 +1353,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   rayColorDefaultState: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   rayColorHoverState: {r: 1, g: 0, b: 0, a: 1}
+  moveSpeed: 2
 --- !u!120 &1555021464
 LineRenderer:
   serializedVersion: 2
@@ -1578,6 +1582,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   rayColorDefaultState: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   rayColorHoverState: {r: 1, g: 0, b: 0, a: 1}
+  moveSpeed: 2
 --- !u!120 &1824788195
 LineRenderer:
   serializedVersion: 2

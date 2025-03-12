@@ -119,63 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &283575159
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1312293228834463952, guid: 6cbac2c5c5dfe4947bde21e90480a2df, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312293228834463952, guid: 6cbac2c5c5dfe4947bde21e90480a2df, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312293228834463952, guid: 6cbac2c5c5dfe4947bde21e90480a2df, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312293228834463952, guid: 6cbac2c5c5dfe4947bde21e90480a2df, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312293228834463952, guid: 6cbac2c5c5dfe4947bde21e90480a2df, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312293228834463952, guid: 6cbac2c5c5dfe4947bde21e90480a2df, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312293228834463952, guid: 6cbac2c5c5dfe4947bde21e90480a2df, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312293228834463952, guid: 6cbac2c5c5dfe4947bde21e90480a2df, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312293228834463952, guid: 6cbac2c5c5dfe4947bde21e90480a2df, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312293228834463952, guid: 6cbac2c5c5dfe4947bde21e90480a2df, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8213709535640881251, guid: 6cbac2c5c5dfe4947bde21e90480a2df, type: 3}
-      propertyPath: m_Name
-      value: PlayerLimitlessWheelchair
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6cbac2c5c5dfe4947bde21e90480a2df, type: 3}
 --- !u!1 &475443725
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,6 +673,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2985332707408105045
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3139258932561944580, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139258932561944580, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139258932561944580, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139258932561944580, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139258932561944580, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139258932561944580, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139258932561944580, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139258932561944580, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139258932561944580, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139258932561944580, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213520943671576759, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
+      propertyPath: m_Name
+      value: PlayerLimitlessWheelchair
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -739,4 +739,4 @@ SceneRoots:
   - {fileID: 2010666217}
   - {fileID: 659825141}
   - {fileID: 1363243661}
-  - {fileID: 283575159}
+  - {fileID: 2985332707408105045}

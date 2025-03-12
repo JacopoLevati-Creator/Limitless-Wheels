@@ -21,16 +21,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    // Handle physics-based movement and rotation.
-    private void FixedUpdate()
-    {
 
-        // Move player based on vertical input.
-        float moveVertical = Input.GetAxis("Vertical");
-        Vector3 movement = eyesReference.forward * moveVertical * speed * Time.fixedDeltaTime;
-        rb.MovePosition(rb.position + movement);
-
-    }
 
     public void MoveMainPlayerForward()
     {
