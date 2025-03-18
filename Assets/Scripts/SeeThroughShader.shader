@@ -1,13 +1,18 @@
-Shader "Custom/SeeThrough"
+Shader "Custom/SeeThroughTransparent"
 {
-    SubShader
+    Properties
     {
-        Tags {"Queue" = "Overlay"} // Disegna sopra tutto
+        _Color("Main Color", Color) = (1,1,1,0.7) // Con trasparenza
+    }
+        SubShader
+    {
+        Tags { "Queue" = "Overlay" "RenderType" = "Transparent" }
         Pass
         {
-            ZWrite Off // Non scrive sulla profondità
-            ZTest Always // Viene sempre disegnato
-            ColorMask RGB // Mantiene i colori normali
+            ZWrite Off         // Non scrive sulla profondità, evita di essere nascosto
+            ZTest Always       // Sempre visibile, anche dietro ai muri
+            Blend SrcAlpha OneMinusSrcAlpha // Abilita trasparenza
+            Color[_Color]
         }
     }
 }

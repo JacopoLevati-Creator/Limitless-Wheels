@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -12,7 +12,7 @@ public class EyeTrackingRay : MonoBehaviour
     private float rayWidth = 0.01f;
 
     [SerializeField]
-    private LayerMask layersToInclude; // Questo verr� sovrascritto nel codice
+    private LayerMask layersToInclude; // Questo verrà sovrascritto nel codice
 
     [SerializeField]
     private Color rayColorDefaultState = Color.yellow;
@@ -21,7 +21,7 @@ public class EyeTrackingRay : MonoBehaviour
     private Color rayColorHoverState = Color.red;
 
     [SerializeField]
-    private float moveSpeed = 2.0f; // Velocit� di movimento
+    private float moveSpeed = 2.0f; // Velocità di movimento
 
     private LineRenderer lineRenderer;
     private List<EyeInteractable> eyeInteractables = new List<EyeInteractable>();
@@ -49,7 +49,7 @@ public class EyeTrackingRay : MonoBehaviour
         RaycastHit hit;
         Vector3 rayCastDirection = transform.TransformDirection(Vector3.forward);
 
-        // ?? Forza il Raycast a colpire SOLO il layer delle Frecce
+        // 🔹 Forza il Raycast a colpire SOLO il layer delle Frecce
         int arrowsLayerMask = LayerMask.GetMask("Arrows");
 
         bool hasHit = Physics.Raycast(transform.position, rayCastDirection, out hit, rayDistance, arrowsLayerMask);
