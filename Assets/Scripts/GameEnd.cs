@@ -1,44 +1,70 @@
 using UnityEngine;
+using System.Collections.Generic;
 
-public class ChangeMaterialOnArea : MonoBehaviour
+public class EndGame : MonoBehaviour
 {
     public Transform[] objects; // Array di oggetti da controllare
-    public Vector3 areaCenter = new Vector3(0, 0, 0); // Centro dell'area target
     public float areaRadius = 2f; // Raggio dell'area target
-    public Material newMaterial; // Nuovo materiale da applicare
+    public Material individualMaterial; // Materiale quando entra nell'area
+    public Material exitMaterial; // Materiale quando esce dall'area
 
-    private bool materialChanged = false;
+    public AudioSource backgroundMusic; // AudioSource per la musica di sottofondo
+    public AudioClip finalMusic; // Nuova musica quando tutti sono dentro
+    public float delayBeforeMusicChange = 2f; // Ritardo prima di cambiare la musica (in secondi)
+
+    private HashSet<Transform> insideObjects = new HashSet<Transform>(); // Oggetti dentro l'area
+    private bool musicChangeScheduled = false; // Per evitare più chiamate a Invoke()
 
     void Update()
     {
-        if (!materialChanged && AllObjectsInArea())
+        Vector3 areaCenter = transform.position; // Usa la posizione dell'oggetto che ha questo script
+
+        foreach (Transform obj in objects)
         {
-            ChangeMaterial();
+            float distance = Vector3.Distance(obj.position, areaCenter);
+            bool isInside = distance <= areaRadius;
+
+            if (isInside && !insideObjects.Contains(obj))
+            {
+                // Se entra nell'area, cambia materiale e aggiungilo alla lista
+                ChangeMaterial(obj, individualMaterial);
+                insideObjects.Add(obj);
+            }
+            else if (!isInside && insideObjects.Contains(obj))
+            {
+                // Se esce dall'area, cambia materiale e rimuovilo dalla lista
+                ChangeMaterial(obj, exitMaterial);
+                insideObjects.Remove(obj);
+
+                // Se un oggetto esce mentre il cambio musica è programmato, annulliamo l'Invoke
+                CancelInvoke(nameof(ChangeMusic));
+                musicChangeScheduled = false;
+            }
+        }
+
+        // Se tutti gli oggetti sono dentro e la musica non è ancora stata cambiata
+        if (insideObjects.Count == objects.Length && !musicChangeScheduled)
+        {
+            Invoke(nameof(ChangeMusic), delayBeforeMusicChange); // Aspetta prima di cambiare la musica
+            musicChangeScheduled = true;
         }
     }
 
-    bool AllObjectsInArea()
+    void ChangeMaterial(Transform obj, Material material)
     {
-        foreach (Transform obj in objects)
+        Renderer objRenderer = obj.GetComponent<Renderer>();
+        if (objRenderer != null && material != null)
         {
-            if (Vector3.Distance(obj.position, areaCenter) > areaRadius)
-            {
-                return false; // Se almeno un oggetto è fuori dall'area, ritorna false
-            }
+            objRenderer.material = material;
         }
-        return true;
     }
 
-    void ChangeMaterial()
+    void ChangeMusic()
     {
-        foreach (Transform obj in objects)
+        if (backgroundMusic != null && finalMusic != null)
         {
-            Renderer objRenderer = obj.GetComponent<Renderer>();
-            if (objRenderer != null && newMaterial != null)
-            {
-                objRenderer.material = newMaterial;
-            }
+            backgroundMusic.clip = finalMusic;
+            backgroundMusic.Play();
         }
-        materialChanged = true; // Evita di cambiare materiale più volte
     }
 }
