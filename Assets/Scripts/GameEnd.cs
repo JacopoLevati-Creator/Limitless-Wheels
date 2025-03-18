@@ -1,11 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
-using TMPro; // Importa TextMeshPro per la UI
 
 public class EndGame : MonoBehaviour
 {
     public Transform[] objects; // Array di oggetti da controllare
     public float areaRadius = 2f; // Raggio dell'area target
+    public Material defaultMaterial; // Materiale iniziale
     public Material individualMaterial; // Materiale quando entra nell'area
     public Material exitMaterial; // Materiale quando esce dall'area
 
@@ -13,23 +13,20 @@ public class EndGame : MonoBehaviour
     public AudioClip finalMusic; // Nuova musica quando tutti sono dentro
     public float delayBeforeMusicChange = 2f; // Ritardo prima di cambiare la musica (in secondi)
 
-    public TextMeshProUGUI endGameText; // Testo per "Esperienza Finita"
-
     private HashSet<Transform> insideObjects = new HashSet<Transform>(); // Oggetti dentro l'area
-    private bool gameEnded = false; // Per evitare più chiamate a Invoke()
+    private bool musicChangeScheduled = false; // Per evitare più chiamate a Invoke()
 
     void Start()
     {
-        if (endGameText != null)
+        // Inizializza tutti gli oggetti con il materiale di default
+        foreach (Transform obj in objects)
         {
-            endGameText.gameObject.SetActive(false); // Nasconde il messaggio all'inizio
+            ChangeMaterial(obj, defaultMaterial);
         }
     }
 
     void Update()
     {
-        if (gameEnded) return; // Evita di continuare a controllare dopo la fine del gioco
-
         Vector3 areaCenter = transform.position; // Usa la posizione dell'oggetto che ha questo script
 
         foreach (Transform obj in objects)
@@ -50,16 +47,16 @@ public class EndGame : MonoBehaviour
                 insideObjects.Remove(obj);
 
                 // Se un oggetto esce mentre il cambio musica è programmato, annulliamo l'Invoke
-                CancelInvoke(nameof(ChangeMusicAndShowText));
-                gameEnded = false;
+                CancelInvoke(nameof(ChangeMusic));
+                musicChangeScheduled = false;
             }
         }
 
-        // Se tutti gli oggetti sono dentro e il gioco non è ancora finito
-        if (insideObjects.Count == objects.Length && !gameEnded)
+        // Se tutti gli oggetti sono dentro e la musica non è ancora stata cambiata
+        if (insideObjects.Count == objects.Length && !musicChangeScheduled)
         {
-            Invoke(nameof(ChangeMusicAndShowText), delayBeforeMusicChange); // Aspetta prima di terminare il gioco
-            gameEnded = true;
+            Invoke(nameof(ChangeMusic), delayBeforeMusicChange); // Aspetta prima di cambiare la musica
+            musicChangeScheduled = true;
         }
     }
 
@@ -72,22 +69,12 @@ public class EndGame : MonoBehaviour
         }
     }
 
-    void ChangeMusicAndShowText()
+    void ChangeMusic()
     {
         if (backgroundMusic != null && finalMusic != null)
         {
             backgroundMusic.clip = finalMusic;
             backgroundMusic.Play();
         }
-
-        // Mostra il messaggio "Esperienza Finita"
-        if (endGameText != null)
-        {
-            endGameText.gameObject.SetActive(true);
-            endGameText.text = "Esperienza Finita";
-        }
-
-        // Ferma il gioco
-        Time.timeScale = 0f;
     }
 }
