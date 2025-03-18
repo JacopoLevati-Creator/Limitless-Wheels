@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(LineRenderer))]
-
 public class EyeTrackingRay : MonoBehaviour
 {
     [SerializeField]
@@ -13,7 +12,7 @@ public class EyeTrackingRay : MonoBehaviour
     private float rayWidth = 0.01f;
 
     [SerializeField]
-    private LayerMask layersToInclude;
+    private LayerMask layersToInclude; // Questo verrà sovrascritto nel codice
 
     [SerializeField]
     private Color rayColorDefaultState = Color.yellow;
@@ -25,21 +24,16 @@ public class EyeTrackingRay : MonoBehaviour
     private float moveSpeed = 2.0f; // Velocità di movimento
 
     private LineRenderer lineRenderer;
-
     private List<EyeInteractable> eyeInteractables = new List<EyeInteractable>();
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
         SetupRay();
     }
 
-
     void SetupRay()
     {
-
         lineRenderer.useWorldSpace = false;
         lineRenderer.positionCount = 2;
         lineRenderer.startWidth = rayWidth;
@@ -47,22 +41,18 @@ public class EyeTrackingRay : MonoBehaviour
         lineRenderer.startColor = rayColorDefaultState;
         lineRenderer.endColor = rayColorDefaultState;
         lineRenderer.SetPosition(0, transform.position);
-        lineRenderer.SetPosition(1, new Vector3(transform.position.x, transform.position.y,
-            transform.position.z + rayDistance));
-
+        lineRenderer.SetPosition(1, new Vector3(transform.position.x, transform.position.y, transform.position.z + rayDistance));
     }
-
- 
-
-
-
 
     void FixedUpdate()
     {
         RaycastHit hit;
         Vector3 rayCastDirection = transform.TransformDirection(Vector3.forward);
 
-        bool hasHit = Physics.Raycast(transform.position, rayCastDirection, out hit, rayDistance, layersToInclude);
+        // ?? Forza il Raycast a colpire SOLO il layer delle Frecce
+        int arrowsLayerMask = LayerMask.GetMask("Arrows");
+
+        bool hasHit = Physics.Raycast(transform.position, rayCastDirection, out hit, rayDistance, arrowsLayerMask);
 
         if (hasHit && hit.transform.GetComponent<EyeInteractable>() != null)
         {
@@ -76,17 +66,6 @@ public class EyeTrackingRay : MonoBehaviour
                 eyeInteractables.Add(eyeInteractable);
 
             eyeInteractable.IsHovered = true;
-
-            
-
-            Vector3 directionToTarget = (hit.point - transform.position).normalized;
-            //transform.position += directionToTarget * 1.0f;
-            //transform.position += directionToTarget * moveSpeed * Time.deltaTime; 
-            //transform.position= eyeInteractable.Pos;
-              
-            // Movimento più fluido verso il punto colpito dal raggio
-            
-            
         }
         else
         {
@@ -94,13 +73,11 @@ public class EyeTrackingRay : MonoBehaviour
             lineRenderer.endColor = rayColorDefaultState;
             UnSelect(true);
         }
-
-
     }
 
     void UnSelect(bool clear = false)
     {
-        foreach(var interactable in eyeInteractables)
+        foreach (var interactable in eyeInteractables)
         {
             interactable.IsHovered = false;
         }
@@ -108,5 +85,5 @@ public class EyeTrackingRay : MonoBehaviour
         {
             eyeInteractables.Clear();
         }
-    } 
+    }
 }
