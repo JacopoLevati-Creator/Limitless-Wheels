@@ -15578,6 +15578,9 @@ PrefabInstance:
       insertIndex: 4
       addedObject: {fileID: 845903764}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3268403564328741334, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1945117678}
     - targetCorrespondingSourceObject: {fileID: 8890973367414953268, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
       insertIndex: 1
       addedObject: {fileID: 1584654114}
@@ -16007,8 +16010,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e6ecf4635c9b0d74ab255c217f6c145e, type: 3}
-  m_Resource: {fileID: 8300000, guid: e6ecf4635c9b0d74ab255c217f6c145e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e6ad4104b52c14695919cb177784c7d0, type: 3}
+  m_Resource: {fileID: 8300000, guid: e6ad4104b52c14695919cb177784c7d0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -25105,6 +25108,19 @@ Transform:
   - {fileID: 437035471}
   m_Father: {fileID: 729614017}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1945117677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3268403564328741334, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
+  m_PrefabInstance: {fileID: 1252111098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &1945117678
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945117677}
+  m_Enabled: 1
 --- !u!1 &1945663079
 GameObject:
   m_ObjectHideFlags: 0
