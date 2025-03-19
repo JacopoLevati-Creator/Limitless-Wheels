@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5.0f; // Set player's movement speed.
-    public float rotationSpeed = 120.0f; // Set player's rotation speed.
+    public Transform eyesReference;
 
     private Rigidbody rb; // Reference to player's Rigidbody.
 
@@ -21,17 +21,38 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    // Handle physics-based movement and rotation.
-    private void FixedUpdate()
-    {
-        // Move player based on vertical input.
-        float moveVertical = Input.GetAxis("Vertical");
-        Vector3 movement = transform.forward * moveVertical * speed * Time.fixedDeltaTime;
-        rb.MovePosition(rb.position + movement);
 
-        // Rotate player based on horizontal input.
-        float turn = Input.GetAxis("Horizontal") * rotationSpeed * Time.fixedDeltaTime;
-        Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
-        rb.MoveRotation(rb.rotation * turnRotation);
+
+    public void MoveMainPlayerForward()
+    {
+        Vector3 movement = eyesReference.forward * speed * Time.fixedDeltaTime;
+        rb.MovePosition(rb.position + movement);
+        Debug.Log("Moving forward");
+    }
+
+    public void MoveMainPlayerBackward()
+    {
+        Vector3 movement = -eyesReference.forward * speed * Time.fixedDeltaTime;
+        rb.MovePosition(rb.position + movement);
+        Debug.Log("Moving backward");
+    }
+
+    public void MoveMainPlayerRight()
+    {
+        Vector3 movement = eyesReference.right * speed * Time.fixedDeltaTime;
+        rb.MovePosition(rb.position + movement);
+        Debug.Log("Moving right");
+    }
+
+     public void MoveMainPlayerLeft()
+    {
+        Vector3 movement = -eyesReference.right * speed * Time.fixedDeltaTime;
+        rb.MovePosition(rb.position + movement);
+        Debug.Log("Moving left");
+    }
+
+    public void StopPlayer()
+    {
+        rb.linearVelocity = Vector3.zero;
     }
 }

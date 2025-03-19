@@ -7,12 +7,12 @@ using UnityEngine.Events;
 public class EyeInteractable : MonoBehaviour
 {
    
-    public bool IsHovered { get; set; }
-    
+    public bool IsHovered { get; set; }    
 
 
     [SerializeField]
-    private UnityEvent<GameObject> OnObjectHover;
+    public UnityEvent OnObjectHover;
+    public UnityEvent OnObjectUnhover;
 
     [SerializeField]
     private Material OnHoverActiveMaterial;
@@ -20,11 +20,15 @@ public class EyeInteractable : MonoBehaviour
     [SerializeField]
     private Material OnHoverInactiveMaterial;
 
-    public Vector3 posizioneCubo;
     private MeshRenderer meshRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start() => meshRenderer = GetComponent<MeshRenderer>();
+    //void Start() => meshRenderer = GetComponent<MeshRenderer>();
+
+    void Start()
+    {
+        meshRenderer = GetComponent<MeshRenderer>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -32,14 +36,12 @@ public class EyeInteractable : MonoBehaviour
         if (IsHovered)
         {
             meshRenderer.material = OnHoverActiveMaterial;
-            OnObjectHover?.Invoke(gameObject);
-
-            posizioneCubo = transform.position;
-            transform.position = new Vector3(1, 1, 1); // dove x, y, z sono le nuove coordinate
-
+            //gameObject.transform.position = gameObject.transform.position + (new Vector3(0f,0f,1f) * 0.001f); //Push cubes away when looked at
+            OnObjectHover?.Invoke();
         }
         else
         {
+            OnObjectUnhover?.Invoke();
             meshRenderer.material = OnHoverInactiveMaterial;
         }
     }
