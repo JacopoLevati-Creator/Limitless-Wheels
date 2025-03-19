@@ -62,14 +62,15 @@ This section outlines the steps to set up your environment for developing Androi
 ### Installing Meta Software
 
 1. [Create Meta account](https://developers.meta.com/horizon/)
-2. Download and install Meta Quest Developer Hub: <https://developers.meta.com/horizon/documentation/unity/ts-odh/>
-3. Download and install Meta Quest Link (only useful if you use Windows and you have a laptop with dedicated graphics card compatible with VR): <https://www.meta.com/engb/help/quest/1517439565442928/>
+2. [Download and install Meta Quest Developer Hub](https://developers.meta.com/horizon/documentation/unity/ts-odh/)
+3. [Download and install Meta Quest Link](https://www.meta.com/engb/help/quest/1517439565442928/) (only useful if you use Windows and you have a laptop with dedicated graphics card compatible with VR)
 
+   
 ### Installing Unity Editor and Configuring XR Packages
 
-1. Create a Unity ID: <https://unity.com/>
-2. Download and install Unity Hub from Link: <https://unity.com/download>
-3. Download and install Unity Editor LTS (Recommended version: v2022.3.XX (any minor version)): <https://unity.com/releases/editor/archive>
+1. [Create a Unity ID](https://unity.com/)
+2. [Download and install Unity Hub from Link](https://unity.com/download)
+3. [Download and install Unity Editor LTS](https://unity.com/releases/editor/archive) (Recommended version: v2022.3.XX (any minor version))
 4. Follow the instructions to complete the Unity Editor installation.
 5. You need to manage your license: choose a free personal license
 
@@ -101,22 +102,19 @@ This section outlines the steps to set up your environment for developing Androi
 To use Limitless Wheels and interact with its features, follow the guidelines below:
 
 - To move around, the user looks at one of the four arrows displayed in front of the camera, and movement occurs in the direction of the selected arrow. To rotate, the user must physically turn their body.
-- To grab and move objects, the user interacts with them virtually, simulating a natural grasping motion within the virtual environment.
+- To grab and move objects, the user interacts with them virtually, simulating a natural grasping motion within the virtual environment. However, the user can only grab and move objects that are colored gold, making it clear which items are interactive.
 - If an object that has been grabbed accidentally falls, it will automatically return to its initial position. This prevents frustration and ensures that the user, who may have difficulty picking it up manually, can continue interacting with the virtual environment without interruptions.
+- The user must collect all the gold-colored objects placed on the gold-colored table in the room. This ensures a clear visual distinction of interactive elements, guiding the user through the task.
 
 Some tips, tricks, and best practices for using Limitless Wheels effectively:
 The arrows that determine the movement direction have been positioned strategically to minimize interference with task execution. This ensures that users can navigate smoothly without distractions while focusing on their interactions within the virtual environment. However, users must be careful not to look at the arrows unintentionally when they do not intend to move. This helps prevent accidental movements and ensures a smoother experience.
 
 ## References
 ### Unity Assets
-- Apartment Kit: <>
-- WhellChair: <>
-- Dining Set: <>
-- FREE Ultimate Procedural Primitives: <https://assetstore.unity.com/packages/tools/level-design/free-ultimate-procedural-primitives-227955>
-  
-Acknowledge here the sources, references, or inspirations that you used for your project. Give credit to the original authors or creators of the materials that you used or adapted for your project (3D models, source code, audio effects, etc.)
+- [Apartment Kit](https://assetstore.unity.com/packages/3d/environments/apartment-kit-124055)
+- [WhellChair](https://assetstore.unity.com/packages/3d/props/whellchair-260547)
+- [Dining Set](https://assetstore.unity.com/packages/3d/props/interior/dining-set-37029)
+- [FREE Ultimate Procedural Primitives](https://assetstore.unity.com/packages/tools/level-design/free-ultimate-procedural-primitives-227955)
 
 ## Contributors
-Jacopo Levati: <https://www.linkedin.com/in/jacopo-levati-335a1224b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8%2BRihYZHQqGImBcDq6%2FxRQ%3D%3D>
-
-The authors of the project, contact information, and links to their websites or portfolios.
+[Jacopo Levati](https://www.linkedin.com/in/jacopo-levati-335a1224b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8%2BRihYZHQqGImBcDq6%2FxRQ%3D%3D)
