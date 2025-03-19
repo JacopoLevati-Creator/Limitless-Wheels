@@ -4,7 +4,7 @@ _Some examples are shown below but you should expand on each subtitle as much as
 
 Include the name, logo and images refering to your project
 
-![{Your App XR} logo](./docs/example-image.jpg)
+![logo](./docs/Logo.jpg)
 
 ## Introduction
 
