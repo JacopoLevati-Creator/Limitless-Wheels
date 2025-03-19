@@ -58,6 +58,12 @@ public class EndGame : MonoBehaviour
         // Se tutti gli oggetti sono dentro e la musica non è ancora stata cambiata
         if (insideObjects.Count == objects.Length && !musicChangeScheduled)
         {
+            // Cambia il materiale dell'oggetto specificato
+            if (finalObject != null && finalObjectMaterial != null)
+            {
+                ChangeMaterial(finalObject, finalObjectMaterial);
+            }
+
             Invoke(nameof(ChangeMusicAndFinalObject), delayBeforeMusicChange); // Aspetta prima di cambiare
             musicChangeScheduled = true;
         }
@@ -81,10 +87,6 @@ public class EndGame : MonoBehaviour
             backgroundMusic.Play();
         }
 
-        // Cambia il materiale dell'oggetto specificato
-        if (finalObject != null && finalObjectMaterial != null)
-        {
-            ChangeMaterial(finalObject, finalObjectMaterial);
-        }
+        
     }
 }
