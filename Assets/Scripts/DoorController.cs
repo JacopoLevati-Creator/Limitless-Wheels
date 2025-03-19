@@ -8,29 +8,29 @@ public class DoorController : MonoBehaviour
     public float openAngle = 90f; // Angolo di apertura della porta
     public float openSpeed = 2f; // Velocità di apertura
 
-    private Quaternion closedRotation;
-    private Quaternion openRotation;
+    public Animator doorAnimator;
+
     private bool isOpen = false;
 
     void Start()
     {
-        closedRotation = transform.rotation;
-        openRotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y + openAngle, transform.eulerAngles.z);
-    }
 
-    void Update()
-    {
-        if (Vector3.Distance(player.position, transform.position) <= detectionRadius && !isOpen)
-        {
-            OpenDoor();
-        }
     }
 
     void OpenDoor()
     {
         isOpen = true;
-        StopAllCoroutines();
-        StartCoroutine(RotateDoor(openRotation));
+        doorAnimator.SetBool("OpenDoor", true);
+        //StopAllCoroutines();
+        //StartCoroutine(RotateDoor(openRotation));
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            OpenDoor();
+        }
     }
 
     IEnumerator RotateDoor(Quaternion targetRotation)

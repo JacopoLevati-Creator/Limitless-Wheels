@@ -9,6 +9,9 @@ public class EndGame : MonoBehaviour
     public Material individualMaterial; // Materiale quando entra nell'area
     public Material exitMaterial; // Materiale quando esce dall'area
 
+    public Transform finalObject; // Oggetto specifico che cambierà materiale alla fine
+    public Material finalObjectMaterial; // Nuovo materiale per l'oggetto finale
+
     public AudioSource backgroundMusic; // AudioSource per la musica di sottofondo
     public AudioClip finalMusic; // Nuova musica quando tutti sono dentro
     public float delayBeforeMusicChange = 2f; // Ritardo prima di cambiare la musica (in secondi)
@@ -47,7 +50,7 @@ public class EndGame : MonoBehaviour
                 insideObjects.Remove(obj);
 
                 // Se un oggetto esce mentre il cambio musica è programmato, annulliamo l'Invoke
-                CancelInvoke(nameof(ChangeMusic));
+                CancelInvoke(nameof(ChangeMusicAndFinalObject));
                 musicChangeScheduled = false;
             }
         }
@@ -55,7 +58,7 @@ public class EndGame : MonoBehaviour
         // Se tutti gli oggetti sono dentro e la musica non è ancora stata cambiata
         if (insideObjects.Count == objects.Length && !musicChangeScheduled)
         {
-            Invoke(nameof(ChangeMusic), delayBeforeMusicChange); // Aspetta prima di cambiare la musica
+            Invoke(nameof(ChangeMusicAndFinalObject), delayBeforeMusicChange); // Aspetta prima di cambiare
             musicChangeScheduled = true;
         }
     }
@@ -69,12 +72,19 @@ public class EndGame : MonoBehaviour
         }
     }
 
-    void ChangeMusic()
+    void ChangeMusicAndFinalObject()
     {
+        // Cambia la musica
         if (backgroundMusic != null && finalMusic != null)
         {
             backgroundMusic.clip = finalMusic;
             backgroundMusic.Play();
+        }
+
+        // Cambia il materiale dell'oggetto specificato
+        if (finalObject != null && finalObjectMaterial != null)
+        {
+            ChangeMaterial(finalObject, finalObjectMaterial);
         }
     }
 }
