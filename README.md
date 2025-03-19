@@ -61,7 +61,7 @@ This section outlines the steps to set up your environment for developing Androi
 
 ### Installing Meta Software
 
-1. Create Meta account: <https://developers.meta.com/horizon/>
+1. [Create Meta account](https://developers.meta.com/horizon/)
 2. Download and install Meta Quest Developer Hub: <https://developers.meta.com/horizon/documentation/unity/ts-odh/>
 3. Download and install Meta Quest Link (only useful if you use Windows and you have a laptop with dedicated graphics card compatible with VR): <https://www.meta.com/engb/help/quest/1517439565442928/>
 
