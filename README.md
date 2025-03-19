@@ -2,9 +2,8 @@
 
 _Some examples are shown below but you should expand on each subtitle as much as needed to provide comprehensive information/ **MarkDown** reference is available here: <https://www.markdownguide.org/basic-syntax/>_
 
-![logo](./docs/Logo.jpg)
 <p align="center">
-  <a href="./docs/Logo.jpg">Click here</a>
+  <img src="./docs/Logo.jpg" alt="Logo">
 </p>
 
 ## Introduction
