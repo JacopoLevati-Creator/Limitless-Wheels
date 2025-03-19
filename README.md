@@ -1,7 +1,5 @@
 # Limitless Wheels
 
-_Some examples are shown below but you should expand on each subtitle as much as needed to provide comprehensive information/ **MarkDown** reference is available here: <https://www.markdownguide.org/basic-syntax/>_
-
 <p align="center">
   <img src="./docs/Logo.jpg" alt="Logo">
 </p>
@@ -12,17 +10,10 @@ Limitless Wheels is an innovative XR experience designed for individuals in whee
 
 ## Design Process
 
-[_Add evidence on the general overview of how you planned, designed, and developed your project, including the goals, challenges, and solutions._]
-
-For example:
-
-- User Persona: A description of your target user, their needs, motivations, and pain points, and how your project addresses them.
-- User Journey: A visualization of how your user interacts with your project, from the initial trigger to the final outcome, and what emotions they experience along the way.
-- Wireframes and Prototypes: A collection of sketches, mockups, or prototypes that show the layout, structure, and functionality of your project, and how you tested and iterated on them.
-
 Many wheelchair users face challenges when adapting to everyday life. They need to practice mobility and interaction within their living spaces while maintaining independence. The lack of engaging, hands-free virtual rehabilitation tools motivated the development of this experience.
 
 ### Brainstorming
+
 The initial idea was to create a virtual reality experience specifically designed for wheelchair users. At first, I considered managing movement through a controller. However, this approach had significant limitations: it required the user to dedicate one hand solely to navigation, which not only restricted their interaction with the virtual environment but also undermined the immersive nature of the experience.
 
 After reflecting on this challenge, I realized that allowing users to have both hands free would greatly enhance the experience. This led me to explore eye-tracking technology as a potential solution for movement control. By leveraging eye-tracking, users could navigate the virtual environment seamlessly without physical constraints, making the experience more intuitive and immersive.
@@ -34,10 +25,10 @@ Traditional rehabilitation exercises can feel repetitive and uninspiring, making
 
 By removing these barriers, this experience makes rehabilitation more engaging, intuitive, and effective. It encourages users to develop confidence, independence, and better mobility in a way that feels both practical and immersive.
 
-
 ## System description
 
 ### Features
+
 - Virtual Apartment: A realistic, interactive space where users perform everyday tasks.
 - Eye-Tracking Navigation: Users move by looking at directional arrows, freeing their hands for interactions.
 - Hands-Free Object Interaction: A touch and grabbable system in Unity allows natural object manipulation.
@@ -45,6 +36,7 @@ By removing these barriers, this experience makes rehabilitation more engaging, 
 - End-of-Experience Event: A rewarding conclusion signaled by a doorbell, reinforcing accomplishment.
 
 #### Navigation System
+
 The movement system is designed to be completely hands-free, using an eye-tracking interface for navigation. Users can move along the horizontal axis by looking at directional arrows displayed in front of the camera. These arrows adjust dynamically, following the rotation of the user’s head, allowing for a natural and intuitive way to control movement.
 
 This system offers several key benefits:
@@ -53,6 +45,7 @@ This system offers several key benefits:
 - Increased Accessibility – Ideal for individuals with limited hand function, ensuring a more inclusive experience.
 
 #### Object Interaction System
+
 Using a Touch & Grabbable System in Unity, users can:
 - Pick up and move objects naturally.
 - Interact with items in a realistic manner.
@@ -63,13 +56,17 @@ Watch the demo video or try the live version.
 Link: <https://extralitylab.dsv.su.se/>
 
 ## Installation
+
 This section outlines the steps to set up your environment for developing Android VR applications using Unity 2022.3 or higher:
+
 ### Installing Meta Software
+
 1. Create Meta account: <https://developers.meta.com/horizon/>
 2. Download and install Meta Quest Developer Hub: <https://developers.meta.com/horizon/documentation/unity/ts-odh/>
 3. Download and install Meta Quest Link (only useful if you use Windows and you have a laptop with dedicated graphics card compatible with VR): <https://www.meta.com/engb/help/quest/1517439565442928/>
 
 ### Installing Unity Editor and Configuring XR Packages
+
 1. Create a Unity ID: <https://unity.com/>
 2. Download and install Unity Hub from Link: <https://unity.com/download>
 3. Download and install Unity Editor LTS (Recommended version: v2022.3.XX (any minor version)): <https://unity.com/releases/editor/archive>
@@ -77,34 +74,32 @@ This section outlines the steps to set up your environment for developing Androi
 5. You need to manage your license: choose a free personal license
 
 ### Configuring a Unity Project for Meta Quest Development
+
 1. Create empty project: Choose the template 3D (URP)
 2. Switch build platform: Choose the platform Android
 3. Import Meta XR SDKs (com.meta.xr.sdk.all)
 
 ### Configure XR in Project Settings
+
 1. In Project Settings, in the section XR Plugin Management, install the plugin.
 2. In the section XR Plugin Management: choose the tab with the Android icon, and tick the Oculus Plug-in provider. Then, also choose the tab with the Desktop icon, and tick Oculus
 3. Click on the Meta XR option on the left menu Click on Fix All
 
 ### Add an XR Camera
+
 1. Remove the Main Camera.
 2. Add a Camera Rig object to the scene.
 
 ### Build your XR App
+
 1. File > Build Settings
 2. You should see the Android version
 3. Press Build and select a name for the requested .apk file
 
-### You also need to install the following dependencies or libraries for your project:
-
-- Library A - a Unity plugin for building VR and AR experiences
-- Library B - a C# wrapper for speech recognition and synthesis
-
 ## Usage
 
-[_Usage section showing how to use your project and interact with its features. You can use examples, screenshots, gifs, or videos to demonstrate the user interface, controls, and feedback of your project. You can also provide tips, tricks, or best practices for using your project effectively._]
 
-To use [Your App XR} and interact with its features, follow the guidelines below:
+To use [Limitless Wheels} and interact with its features, follow the guidelines below:
 
 - To move around, the user looks at one of the four arrows displayed in front of the camera, and movement occurs in the direction of the selected arrow. To rotate, the user must physically turn their body.
 - To grab and move objects, the user interacts with them virtually, simulating a natural grasping motion within the virtual environment.
