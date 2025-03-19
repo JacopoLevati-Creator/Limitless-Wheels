@@ -33,7 +33,7 @@ Many wheelchair users face challenges when adapting to everyday life. They need 
 - An intuitive and immersive experience without requiring controllers.
 - A system that encourages independence and boosts confidence.
 
-#### Motivations:
+#### Motivations
 - The desire to regain control over daily life activities.
 - A fun, engaging way to practice mobility and hand coordination.
 - Increased accessibility in virtual rehabilitation experiences.
@@ -73,14 +73,42 @@ Link: <https://extralitylab.dsv.su.se/>
 
 [_Installation process to build and run your project. Use code blocks, tables, or lists to show the commands, steps, or requirements the chosen platform. Mention any dependencies or libraries that your project uses and how to install them._]
 
-To install and run [Your app] on your platform or device, follow the instructions below:
+This section outlines the steps to set up your environment for developing Android VR applications using Unity 2022.3 or higher:
 
-| Platform | Device | Requirements | Commands |
-| -------- | ------ | ------------ | -------- |
-| Windows  | Meta Quest   | Unity 2022.3 or higher, Arduino | `git clone https://github.com/user/repo.git`<br>`cd project-xr`<br>`open MainScene.unity`<br>`Build and Run` |
-| Android  | Phone  | Android 19 or higher, ARCore 1.18 or higher | `git clone https://github.com/user/repo.git`<br>`cd solar-system-xr`<br>`open SolarSystemXR.unity`<br>`switch platform to Android`<br>`build and run` |
 
-You also need to install the following dependencies or libraries for your project:
+
+### Installing Meta Software
+1. Create Meta account: <https://developers.meta.com/horizon/>
+2. Download and install Meta Quest Developer Hub: <https://developers.meta.com/horizon/documentation/unity/ts-odh/>
+3. Download and install Meta Quest Link (only useful if you use Windows and you have a laptop with dedicated graphics card compatible with VR): <https://www.meta.com/engb/help/quest/1517439565442928/>
+
+### Installing Unity Editor and Configuring XR Packages
+1. Create a Unity ID: <https://unity.com/>
+2. Download and install Unity Hub from Link: <https://unity.com/download>
+3. Download and install Unity Editor LTS (Recommended version: v2022.3.XX (any minor version)): <https://unity.com/releases/editor/archive>
+4. Follow the instructions to complete the Unity Editor installation.
+5. You need to manage your license: choose a free personal license
+
+### Configuring a Unity Project for Meta Quest Development
+1. Create empty project: Choose the template 3D (URP)
+2. Switch build platform: Choose the platform Android
+3. Import Meta XR SDKs (com.meta.xr.sdk.all)
+
+### Configure XR in Project Settings
+1. In Project Settings, in the section XR Plugin Management, install the plugin.
+2. In the section XR Plugin Management: choose the tab with the Android icon, and tick the Oculus Plug-in provider. Then, also choose the tab with the Desktop icon, and tick Oculus
+3. Click on the Meta XR option on the left menu Click on Fix All
+
+### Add an XR Camera
+1. Remove the Main Camera.
+2. Add a Camera Rig object to the scene.
+
+### Build your XR App
+1. File > Build Settings
+2. You should see the Android version
+3. Press Build and select a name for the requested .apk file
+
+### You also need to install the following dependencies or libraries for your project:
 
 - Library A - a Unity plugin for building VR and AR experiences
 - Library B - a C# wrapper for speech recognition and synthesis
@@ -110,5 +138,6 @@ Some tips, tricks, and best practices for using [Your App XR} effectively:
 Acknowledge here the sources, references, or inspirations that you used for your project. Give credit to the original authors or creators of the materials that you used or adapted for your project (3D models, source code, audio effects, etc.)
 
 ## Contributors
+Jacopo Levati: <https://www.linkedin.com/in/jacopo-levati-335a1224b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8%2BRihYZHQqGImBcDq6%2FxRQ%3D%3D>
 
 The authors of the project, contact information, and links to their websites or portfolios.
