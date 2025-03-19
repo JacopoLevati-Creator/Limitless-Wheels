@@ -15,33 +15,24 @@ Limitless Wheels is an innovative XR experience designed for individuals in whee
 [_Add evidence on the general overview of how you planned, designed, and developed your project, including the goals, challenges, and solutions._]
 
 For example:
-x- Brainstorming: A screenshot of the whiteboard or post-it notes used to land the project's idea.
-x- User Research: Pictures and summary of how you conducted user research, such as surveys, interviews, or observations, and what insights you gained from it.
+
 - User Persona: A description of your target user, their needs, motivations, and pain points, and how your project addresses them.
 - User Journey: A visualization of how your user interacts with your project, from the initial trigger to the final outcome, and what emotions they experience along the way.
 - Wireframes and Prototypes: A collection of sketches, mockups, or prototypes that show the layout, structure, and functionality of your project, and how you tested and iterated on them.
 
 Many wheelchair users face challenges when adapting to everyday life. They need to practice mobility and interaction within their living spaces while maintaining independence. The lack of engaging, hands-free virtual rehabilitation tools motivated the development of this experience.
 
+### Brainstorming
+The initial idea was to create a virtual reality experience specifically designed for wheelchair users. At first, I considered managing movement through a controller. However, this approach had significant limitations: it required the user to dedicate one hand solely to navigation, which not only restricted their interaction with the virtual environment but also undermined the immersive nature of the experience.
+
+After reflecting on this challenge, I realized that allowing users to have both hands free would greatly enhance the experience. This led me to explore eye-tracking technology as a potential solution for movement control. By leveraging eye-tracking, users could navigate the virtual environment seamlessly without physical constraints, making the experience more intuitive and immersive.
+
 ### Target Users
-- Individuals who use wheelchairs but retain upper-body mobility.
-- People undergoing rehabilitation to regain independence in daily activities.
-- Users seeking a virtual environment for safe mobility training.
+This project is designed for wheelchair users with upper-body mobility and those in rehabilitation looking to regain independence. It offers a safe and controlled virtual space where users can practice movement and daily tasks without physical risks.
 
-#### Needs
-- A controlled environment to practice daily tasks.
-- An intuitive and immersive experience without requiring controllers.
-- A system that encourages independence and boosts confidence.
+Traditional rehabilitation exercises can feel repetitive and uninspiring, making it hard to stay motivated. Many VR applications require hand controllers, which can be limiting and reduce accessibility. To overcome this, eye-tracking technology is used for movement control, allowing users to navigate naturally while keeping their hands free.
 
-#### Motivations
-- The desire to regain control over daily life activities.
-- A fun, engaging way to practice mobility and hand coordination.
-- Increased accessibility in virtual rehabilitation experiences.
-
-#### Pain Points
-- Traditional rehabilitation exercises can be repetitive and uninspiring.
-- Many VR applications require hand controllers, limiting accessibility.
-- A lack of real-life scenario training in standard rehabilitation programs.
+By removing these barriers, this experience makes rehabilitation more engaging, intuitive, and effective. It encourages users to develop confidence, independence, and better mobility in a way that feels both practical and immersive.
 
 
 ## System description
@@ -54,10 +45,12 @@ Many wheelchair users face challenges when adapting to everyday life. They need 
 - End-of-Experience Event: A rewarding conclusion signaled by a doorbell, reinforcing accomplishment.
 
 #### Navigation System
-The movement system is designed to be completely hands-free using an eye-tracking interface. Users look at directional arrows to move along the horizontal axis. This system provides:
-- Intuitive Movement without requiring controllers.
-- Focus on Tasks rather than on navigation mechanics.
-- Increased Accessibility for individuals with limited hand function.
+The movement system is designed to be completely hands-free, using an eye-tracking interface for navigation. Users can move along the horizontal axis by looking at directional arrows displayed in front of the camera. These arrows adjust dynamically, following the rotation of the user’s head, allowing for a natural and intuitive way to control movement.
+
+This system offers several key benefits:
+- Intuitive Movement – No need for controllers, making navigation seamless.
+- Focus on Tasks – Users can concentrate on interactions rather than on movement mechanics.
+- Increased Accessibility – Ideal for individuals with limited hand function, ensuring a more inclusive experience.
 
 #### Object Interaction System
 Using a Touch & Grabbable System in Unity, users can:
@@ -70,13 +63,7 @@ Watch the demo video or try the live version.
 Link: <https://extralitylab.dsv.su.se/>
 
 ## Installation
-
-[_Installation process to build and run your project. Use code blocks, tables, or lists to show the commands, steps, or requirements the chosen platform. Mention any dependencies or libraries that your project uses and how to install them._]
-
 This section outlines the steps to set up your environment for developing Android VR applications using Unity 2022.3 or higher:
-
-
-
 ### Installing Meta Software
 1. Create Meta account: <https://developers.meta.com/horizon/>
 2. Download and install Meta Quest Developer Hub: <https://developers.meta.com/horizon/documentation/unity/ts-odh/>
@@ -119,13 +106,8 @@ This section outlines the steps to set up your environment for developing Androi
 
 To use [Your App XR} and interact with its features, follow the guidelines below:
 
-- To move around, use the touchpad or the joystick on your controller, or swipe on your phone screen.
-- To select ...a planet or a moon, point at it with your controller or your phone, or gaze at it with your headset.
-- To zoom in or out, use the trigger or the button on your controller, or pinch on your phone screen.
-- To access the information panel, press...
-- To use voice commands, say "OK" followed by one of the following phrases:
-  - "Show me [X]" - to show X element
-  - "Close window Y" - to close window Y
+- To move around, the user looks at one of the four arrows displayed in front of the camera, and movement occurs in the direction of the selected arrow. To rotate, the user must physically turn their body.
+- To grab and move objects, the user interacts with them virtually, simulating a natural grasping motion within the virtual environment.
   
 Some tips, tricks, and best practices for using [Your App XR} effectively:
 
