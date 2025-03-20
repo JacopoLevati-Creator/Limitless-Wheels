@@ -10,6 +10,9 @@
     <span style="margin-left: 10px;">Limitless Wheels is an innovative XR experience designed for individuals in wheelchairs who can move their upper bodies. The goal of this experience is to provide a sense of freedom and rehabilitation by allowing users to practice daily tasks in a safe and controlled environment. Many individuals in wheelchairs need to relearn independent living, and Limitless Wheels offers a way to engage in these activities in an immersive virtual space.</span>
 </p>
 
+| ![Descrizione](docs/Poster.jpg) | Limitless Wheels is an innovative XR experience designed for individuals in wheelchairs who can move their upper bodies. The goal of this experience is to provide a sense of freedom and rehabilitation by allowing users to practice daily tasks in a safe and controlled environment. Many individuals in wheelchairs need to relearn independent living, and Limitless Wheels offers a way to engage in these activities in an immersive virtual space.|
+|--------------------------------------|--------------------------------|
+
 ## Design Process
 
 Many wheelchair users face challenges when adapting to everyday life. They need to practice mobility and interaction within their living spaces while maintaining independence. The lack of engaging, hands-free virtual rehabilitation tools motivated the development of this experience.
