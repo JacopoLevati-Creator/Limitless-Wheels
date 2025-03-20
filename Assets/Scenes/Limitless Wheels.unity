@@ -16703,15 +16703,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518373599499311102, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
       propertyPath: rayColorDefaultState.b
-      value: 0.21568629
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2518373599499311102, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
       propertyPath: rayColorDefaultState.g
-      value: 0.21568629
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2518373599499311102, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
       propertyPath: rayColorDefaultState.r
-      value: 0.21568629
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2965394102764358642, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16799,15 +16799,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6467602893844707777, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
       propertyPath: rayColorDefaultState.b
-      value: 0.34901962
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6467602893844707777, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
       propertyPath: rayColorDefaultState.g
-      value: 0.3019608
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6467602893844707777, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
       propertyPath: rayColorDefaultState.r
-      value: 0.26666668
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7209899269594466357, guid: 474842e7ef3088c4d8f0f31ac19024cd, type: 3}
       propertyPath: m_IsActive
