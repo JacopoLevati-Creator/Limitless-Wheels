@@ -5,16 +5,7 @@
 </p>
 
 ## Introduction
-<div style="display: flex; align-items: flex-start;">
-    <img src="docs/Poster.jpg" width="150" style="margin-right: 10px;">
-    <p style="margin: 0; max-width: 600px;">
-        Limitless Wheels is an innovative XR experience designed for individuals in wheelchairs who can move their upper bodies. The goal of this experience is to provide a sense of freedom and rehabilitation by allowing users to practice daily tasks in a safe and controlled environment. Many individuals in wheelchairs need to relearn independent living, and Limitless Wheels offers a way to engage in these activities in an immersive virtual space.
-    </p>
-</div>
-
-
-| ![Descrizione](docs/Poster.jpg) | Limitless Wheels is an innovative XR experience designed for individuals in wheelchairs who can move their upper bodies. The goal of this experience is to provide a sense of freedom and rehabilitation by allowing users to practice daily tasks in a safe and controlled environment. Many individuals in wheelchairs need to relearn independent living, and Limitless Wheels offers a way to engage in these activities in an immersive virtual space.|
-|--------------------------------------|--------------------------------|
+Limitless Wheels is an innovative XR experience designed for individuals in wheelchairs who can move their upper bodies. The goal of this experience is to provide a sense of freedom and rehabilitation by allowing users to practice daily tasks in a safe and controlled environment. Many individuals in wheelchairs need to relearn independent living, and Limitless Wheels offers a way to engage in these activities in an immersive virtual space.
 
 ## Design Process
 
@@ -25,6 +16,8 @@ Many wheelchair users face challenges when adapting to everyday life. They need 
 The initial idea was to create a virtual reality experience specifically designed for wheelchair users. At first, I considered managing movement through a controller. However, this approach had significant limitations: it required the user to dedicate one hand solely to navigation, which not only restricted their interaction with the virtual environment but also undermined the immersive nature of the experience.
 
 After reflecting on this challenge, I realized that allowing users to have both hands free would greatly enhance the experience. This led me to explore eye-tracking technology as a potential solution for movement control. By leveraging eye-tracking, users could navigate the virtual environment seamlessly without physical constraints, making the experience more intuitive and immersive.
+
+The rehabilitation tasks included in this experience were deliberately designed to be simple and intuitive. The primary goal is not to challenge users with complex interactions but rather to encourage them to explore the surrounding space using eye-tracking technology. This approach allows them to experience movement freely, without the usual impediments and limitations of being in a wheelchair, fostering a greater sense of independence and immersion.
 
 ### Target Users
 This project is designed for wheelchair users with upper-body mobility and those in rehabilitation looking to regain independence. It offers a safe and controlled virtual space where users can practice movement and daily tasks without physical risks.
@@ -41,11 +34,17 @@ By removing these barriers, this experience makes rehabilitation more engaging, 
 - Eye-Tracking Navigation: Users move by looking at directional arrows, freeing their hands for interactions.
 - Hands-Free Object Interaction: A touch and grabbable system in Unity allows natural object manipulation.
 - Task Completion System: Tasks like setting the table and organizing objects reinforce rehabilitation and independence.
-- End-of-Experience Event: A rewarding conclusion signaled by a doorbell, reinforcing accomplishment.
+- End-of-Experience Event: A rewarding conclusion signaled by a doorbell, reinforcing accomplishment. Additionally, background music is played throughout the experience to make it more enjoyable and inclusive.
 
 #### Navigation System
 
 The movement system is designed to be completely hands-free, using an eye-tracking interface for navigation. Users can move along the horizontal axis by looking at directional arrows displayed in front of the camera. These arrows adjust dynamically, following the rotation of the user’s head, allowing for a natural and intuitive way to control movement.
+
+To ensure a seamless and non-intrusive experience, the arrows are colored in a semi-transparent white, preventing any obstruction of vision or discomfort for the user. When a user focuses on a specific arrow, its transparency level slightly changes, providing subtle visual feedback.
+
+The eye-tracking beam, which extends from the user's eyes, has been deliberately made invisible to avoid distractions and to keep the experience as immersive and realistic as possible. However, when the user looks at one of the arrows, the previously invisible beam turns red, and the arrow’s transparency adjusts accordingly to indicate activation of the movement. This design choice ensures that navigation remains intuitive while maintaining a clean and unobtrusive visual interface.
+
+Additionally, the arrows have been designed to remain visible and accessible to the user's eye-tracking beam even through walls and objects, ensuring that movement is always possible regardless of the user's position in the environment. Furthermore, the arrows do not collide with objects, allowing for smooth and uninterrupted navigation.
 
 This system offers several key benefits:
 - Intuitive Movement – No need for controllers, making navigation seamless.
@@ -58,6 +57,7 @@ Using a Touch & Grabbable System in Unity, users can:
 - Pick up and move objects naturally.
 - Interact with items in a realistic manner.
 - Precisely place objects where needed.
+- If an object accidentally falls to the floor, it is automatically repositioned to its initial location, ensuring a smooth and frustration-free interaction.
 
 Watch the demo video or try the live version.
 
@@ -126,3 +126,5 @@ The arrows that determine the movement direction have been positioned strategica
 
 ## Contributors
 [Jacopo Levati](https://www.linkedin.com/in/jacopo-levati-335a1224b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8%2BRihYZHQqGImBcDq6%2FxRQ%3D%3D)
+
+
