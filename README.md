@@ -40,8 +40,8 @@ By removing these barriers, this experience makes rehabilitation more engaging, 
 - Eye-Tracking Navigation: Users move by looking at directional arrows, freeing their hands for interactions.
 
 <p align="center">
-  <img src="./docs/RayUnHover.jpg" alt="Apartment" width="45%">
-  <img src="./docs/RayUnHover.jpg" alt="Kitchen" width="45%">
+  <img src="./docs/RayUnHover.jpg" alt="Ray" width="45%">
+  <img src="./docs/RayUnHover.jpg" alt="Ray" width="45%">
 </p>
 
 - Hands-Free Object Interaction: A touch and grabbable system in Unity allows natural object manipulation.
