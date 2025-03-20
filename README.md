@@ -41,7 +41,7 @@ By removing these barriers, this experience makes rehabilitation more engaging, 
 
 <p align="center">
   <img src="./docs/RayUnHover.jpg" alt="Ray" width="45%">
-  <img src="./docs/RayUnHover.jpg" alt="Ray" width="45%">
+  <img src="./docs/RayHover.jpg" alt="RedRay" width="45%">
 </p>
 
 - Hands-Free Object Interaction: A touch and grabbable system in Unity allows natural object manipulation.
