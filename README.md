@@ -40,7 +40,7 @@ By removing these barriers, this experience makes rehabilitation more engaging, 
 - Eye-Tracking Navigation: Users move by looking at directional arrows, freeing their hands for interactions.
 
 <p align="center">
-  <img src="./docs/RayUnHover.jpg" alt="Ray" width="45%">
+  <img src="./docs/RayUnHover.jpg" alt="YellowRay" width="45%">
   <img src="./docs/RayHover.jpg" alt="RedRay" width="45%">
 </p>
 
