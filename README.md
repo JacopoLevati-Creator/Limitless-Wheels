@@ -89,7 +89,7 @@ Link: <https://extralitylab.dsv.su.se/>
 
 ## Installation
 
-This section outlines the steps to set up your environment for developing Android VR applications using Unity 2022.3 or higher:
+This section outlines the steps to set up your environment for developing Android VR applications using Unity 6000.0 or higher:
 
 ### Installing Meta Software
 
@@ -102,7 +102,7 @@ This section outlines the steps to set up your environment for developing Androi
 
 1. [Create a Unity ID](https://unity.com/)
 2. [Download and install Unity Hub from Link](https://unity.com/download)
-3. [Download and install Unity Editor LTS](https://unity.com/releases/editor/archive) (Recommended version: v2022.3.XX (any minor version))
+3. [Download and install Unity Editor LTS](https://unity.com/releases/editor/archive) (Recommended version: v6000.0.40f1)
 4. Follow the instructions to complete the Unity Editor installation.
 5. You need to manage your license: choose a free personal license
 
