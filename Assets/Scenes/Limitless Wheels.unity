@@ -29651,6 +29651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dringingGlassTouchGrab
       objectReference: {fileID: 0}
+    - target: {fileID: 2705735969592898375, guid: 1d19d9071eea6044eb8e48d18e40dfbc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4816005329511003583, guid: 1d19d9071eea6044eb8e48d18e40dfbc, type: 3}
       propertyPath: m_Enabled
       value: 1
