@@ -31,6 +31,10 @@ By removing these barriers, this experience makes rehabilitation more engaging, 
 ### Features
 
 - Virtual Apartment: A realistic, interactive space where users perform everyday tasks.
+  <p align="center">
+  <img src="./docs/Apartment.jpg" alt="Logo">
+  <img src="./docs/Kitchen.jpg" alt="Logo">
+</p>
 - Eye-Tracking Navigation: Users move by looking at directional arrows, freeing their hands for interactions.
 - Hands-Free Object Interaction: A touch and grabbable system in Unity allows natural object manipulation.
 - Task Completion System: Tasks like setting the table and organizing objects reinforce rehabilitation and independence.
