@@ -44,8 +44,15 @@ By removing these barriers, this experience makes rehabilitation more engaging, 
   <img src="./docs/RayHover.jpg" alt="RedRay" width="45%">
 </p>
 
-- Hands-Free Object Interaction: A touch and grabbable system in Unity allows natural object manipulation.
+- Hands-Free Object Interaction: A touch and grabbable system in Unity allows natural object manipulation, supporting both one-handed and two-handed interactions.
+
+<p align="center">
+  <img src="./docs/GlassGrab.jpg" alt="Glass" width="45%">
+  <img src="./docs/MirrorTrayGrab.jpg" alt="Tray" width="45%">
+</p>
+  
 - Task Completion System: Tasks like setting the table and organizing objects reinforce rehabilitation and independence.
+  
 - End-of-Experience Event: A rewarding conclusion signaled by a doorbell, reinforcing accomplishment. Additionally, background music is played throughout the experience to make it more enjoyable and inclusive.
 
 #### Navigation System
