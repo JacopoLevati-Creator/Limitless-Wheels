@@ -52,7 +52,12 @@ By removing these barriers, this experience makes rehabilitation more engaging, 
 </p>
   
 - Task Completion System: Tasks like setting the table and organizing objects reinforce rehabilitation and independence.
-  
+
+<p align="center">
+  <img src="./docs/Table.jpg" alt="Table" width="45%">
+  <img src="./docs/SetTable.jpg" alt="SetTable" width="45%">
+</p>
+
 - End-of-Experience Event: A rewarding conclusion signaled by a doorbell, reinforcing accomplishment. Additionally, background music is played throughout the experience to make it more enjoyable and inclusive.
 
 #### Navigation System
